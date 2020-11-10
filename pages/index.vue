@@ -22,6 +22,7 @@
       <div>プロダクト</div>
     </div>
   </aside>
+  
   <main class="main">
     返信済み/見積もり中
   </main>
