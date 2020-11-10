@@ -5,39 +5,42 @@
     <h3>
       取引  <input type='text'> <button @click="search">検索</button>
     </h3>
-    <h3>
-      <!-- ↓　""コンポーネント内容変更必要　-->
-      <button @click="pipeline" class="button--grey">パイプライン</button> <button @click="list" class="button--grey">リスト</button> <button @click="add" class="button--green">追加</button>
-    </h3>
   </header>
-
-  <div class="wrapper">
-  <aside class="sidebar">
-    <div class="sidebar__inner">
-      <div>ホーム</div>
-      <div>リード</div>
-      <div>アクティビティ</div>
-      <div>連絡先</div>
-      <div>分析</div>
-      <div>プロダクト</div>
-    </div>
-  </aside>
   
-  <main class="main">
-    返信済み/見積もり中
-  </main>
-  <main class="main">
-    見積もり送付済み
-  </main>
-  <main class="main">
-    受注確定/請求書発行
-  </main>
-  <main class="main">
-    請求書発行済/制作指示済
-  </main>
-  <main class="main">
-    検収中/追加の請求書発行
-  </main>
+  <div class="wrapper">
+    <aside class="sidebar">
+      <div class="sidebar__inner">
+        <div>ホーム</div>
+        <div>リード</div>
+        <div>アクティビティ</div>
+        <div>連絡先</div>
+        <div>分析</div>
+        <div>プロダクト</div>
+      </div>
+    </aside>
+
+    <div>
+      <h3 class="subheader__inner">
+        <button @click="pipeline" class="button--grey">パイプライン</button> <button @click="list" class="button--grey">リスト</button> <button @click="add" class="button--green">追加</button>
+      </h3>
+      <div class="wrapper">
+        <main class="main">
+          返信済み/見積もり中
+        </main>
+        <main class="main">
+          見積もり送付済み
+        </main>
+        <main class="main">
+        受注確定/請求書発行
+        </main>
+        <main class="main">
+          請求書発行済/制作指示済
+        </main>
+        <main class="main">
+          検収中/追加の請求書発行
+        </main>
+      </div>
+    </div>
   </div>
 
 </div>
@@ -68,35 +71,6 @@ export default Vue.extend({})
   color: #fff;
   background-color: #3b8070;
 }
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 
 .header__inner {
   position: relative;
@@ -107,12 +81,19 @@ export default Vue.extend({})
 
 .wrapper {
   display: flex;
-  max-width: 700px;
+  max-width: relative;
   margin: 2.5em auto;
 }
 
+.subheader__inner {
+  position: relative;
+  height: 5vh;
+  border: 1px solid #d6336c;
+  background-color: #fff0f6;
+}
+
 .sidebar {
-  width: 30%;
+  width: 10%;
   margin-right: 1em;
 }
 
