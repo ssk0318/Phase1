@@ -24,20 +24,37 @@
         <button @click="pipeline" class="button--grey">パイプライン</button> <button @click="list" class="button--grey">リスト</button> <button @click="add" class="button--green">追加</button>
       </h3>
       <div class="wrapper">
-        <main class="main">
+        <main class="main__topic">
           返信済み/見積もり中
         </main>
-        <main class="main">
+        <main class="main__topic">
           見積もり送付済み
         </main>
-        <main class="main">
+        <main class="main__topic">
         受注確定/請求書発行
         </main>
-        <main class="main">
+        <main class="main__topic">
           請求書発行済/制作指示済
         </main>
-        <main class="main">
+        <main class="main__topic">
           検収中/追加の請求書発行
+        </main>
+      </div>
+      <div class="wrapper">
+        <main class="main">
+          コンテンツ
+        </main>
+        <main class="main">
+          コンテンツ
+        </main>
+        <main class="main">
+          コンテンツ
+        </main>
+        <main class="main">
+          コンテンツ
+        </main>
+        <main class="main">
+          コンテンツ
         </main>
       </div>
     </div>
@@ -105,8 +122,18 @@ export default Vue.extend({})
   background-color: #e7f5ff;
 }
 
+.main__topic {
+  display: flex;
+  position: relative;
+  width: 20%;
+  height: 5vh;
+  border: 1px solid #d6336c;
+  background-color: #fff0f6;
+}
+
 .main {
   position: relative;
+  width: 20%;
   height: 300vh;
   border: 1px solid #d6336c;
   background-color: #fff0f6;
